@@ -102,7 +102,7 @@
     motion: true,
     duoshuo: {
       userId: 0,
-      author: 'Author'
+      author: '博主'
     }
   };
 </script>
@@ -115,7 +115,7 @@
   <title> Rudy' Life </title>
 </head>
 
-<body itemscope itemtype="http://schema.org/WebPage" lang="zh_CN,en_US">
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
 
   
 
@@ -172,7 +172,7 @@
             
               <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
             
-            Startseite
+            首页
           </a>
         </li>
       
@@ -182,7 +182,7 @@
             
               <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
             
-            Archiv
+            归档
           </a>
         </li>
       
@@ -192,7 +192,7 @@
             
               <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
             
-            Tags
+            标签
           </a>
         </li>
       
@@ -248,7 +248,7 @@
             <span class="post-meta-item-icon">
               <i class="fa fa-calendar-o"></i>
             </span>
-            <span class="post-meta-item-text">Veröffentlicht am</span>
+            <span class="post-meta-item-text">发表于</span>
             <time itemprop="dateCreated" datetime="2016-08-03T16:02:50+08:00" content="2016-08-03">
               2016-08-03
             </time>
@@ -278,8 +278,7 @@
 
       
         
-          
-            <h5 id="1-在config-environments-development-rb文件里配置邮件信息"><a href="#1-在config-environments-development-rb文件里配置邮件信息" class="headerlink" title="1 在config/environments/development.rb文件里配置邮件信息"></a>1 在config/environments/development.rb文件里配置邮件信息</h5><pre><code>config.action_mailer.raise_delivery_errors = true
+          <h5 id="1-在config-environments-development-rb文件里配置邮件信息"><a href="#1-在config-environments-development-rb文件里配置邮件信息" class="headerlink" title="1 在config/environments/development.rb文件里配置邮件信息"></a>1 在config/environments/development.rb文件里配置邮件信息</h5><pre><code>config.action_mailer.raise_delivery_errors = true
   config.action_mailer.delivery_method = :smtp
   config.action_mailer.smtp_settings = {
       :address              =&gt; &quot;smtp.163.com&quot;,
@@ -289,24 +288,12 @@
       :password             =&gt; &apos;你的密码&apos;,
       :authentication       =&gt; :login,
   }
-</code></pre><h5 id="2-创建一个基础类-放在-app-mailers目录下"><a href="#2-创建一个基础类-放在-app-mailers目录下" class="headerlink" title="2 创建一个基础类 放在 app/mailers目录下"></a>2 创建一个基础类 放在 app/mailers目录下</h5><pre><code>class ApplicationMailer &lt; ActionMailer::Base
-       default from: &quot;邮箱地址&quot; #这里最好和上面配置文件中你的邮箱账户一样，否则可能有奇怪问题
-       layout &apos;mailer&apos;
-end
-</code></pre><h5 id="3-创建一个实际业务逻辑类"><a href="#3-创建一个实际业务逻辑类" class="headerlink" title="3 创建一个实际业务逻辑类"></a>3 创建一个实际业务逻辑类</h5><pre><code>class OrderNotifier &lt; ApplicationMailer
-  def received
-    mail to: &quot;收件人地址&quot;, subject: &apos;Pragmatic Store Order Confirmation&apos;
-  end
-end
-</code></pre><h5 id="4-view-order-notifier目录下创建对应方法模板，例如-received-text-rb"><a href="#4-view-order-notifier目录下创建对应方法模板，例如-received-text-rb" class="headerlink" title="4 view/order_notifier目录下创建对应方法模板，例如 received.text.rb"></a>4 view/order_notifier目录下创建对应方法模板，例如 received.text.rb</h5><pre><code>&lt;h1&gt;OrderNotifier#received&lt;/h1&gt;
-   &lt;p&gt;
-        test received email
-   &lt;/p&gt;
-</code></pre><h5 id="5-action中调用邮件类发送邮件"><a href="#5-action中调用邮件类发送邮件" class="headerlink" title="5 action中调用邮件类发送邮件"></a>5 action中调用邮件类发送邮件</h5><pre><code>OrderNotifier.received.deliver_now
-
-**具体可以看 agile web development with rails4 第五版，177页详细介绍，这里只做摘记**
 </code></pre>
-          
+          <div class="post-more-link text-center">
+            <a class="btn" href="/2016/08/03/rails-config-email/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
         
       
     </div>
@@ -375,7 +362,7 @@ end
           <div class="site-state-item site-state-posts">
             <a href="/archives">
               <span class="site-state-item-count">1</span>
-              <span class="site-state-item-name">Artikel</span>
+              <span class="site-state-item-name">日志</span>
             </a>
           </div>
 
@@ -385,7 +372,7 @@ end
             <div class="site-state-item site-state-tags">
               <a href="/tags">
                 <span class="site-state-item-count">1</span>
-                <span class="site-state-item-name">Tags</span>
+                <span class="site-state-item-name">标签</span>
               </a>
             </div>
           
@@ -429,11 +416,11 @@ end
 </div>
 
 <div class="powered-by">
-  Erstellt mit  <a class="theme-link" href="https://hexo.io">Hexo</a>
+  由 <a class="theme-link" href="https://hexo.io">Hexo</a> 强力驱动
 </div>
 
 <div class="theme-info">
-  Theme -
+  主题 -
   <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
     NexT.Muse
   </a>

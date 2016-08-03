@@ -96,7 +96,7 @@
   config.action_mailer.delivery_method = :smtp
   config.action_mailer.smtp_settings = {
       :address">
-<meta property="og:updated_time" content="2016-08-03T08:18:17.303Z">
+<meta property="og:updated_time" content="2016-08-03T08:42:16.687Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="rails config email">
 <meta name="twitter:description" content="1 在config/environments/development.rb文件里配置邮件信息config.action_mailer.raise_delivery_errors = true
@@ -115,7 +115,7 @@
     motion: true,
     duoshuo: {
       userId: 0,
-      author: 'Author'
+      author: '博主'
     }
   };
 </script>
@@ -128,7 +128,7 @@
   <title> rails config email | Rudy' Life </title>
 </head>
 
-<body itemscope itemtype="http://schema.org/WebPage" lang="zh_CN,en_US">
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
 
   
 
@@ -183,7 +183,7 @@
             
               <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
             
-            Startseite
+            首页
           </a>
         </li>
       
@@ -193,7 +193,7 @@
             
               <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
             
-            Archiv
+            归档
           </a>
         </li>
       
@@ -203,7 +203,7 @@
             
               <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
             
-            Tags
+            标签
           </a>
         </li>
       
@@ -256,7 +256,7 @@
             <span class="post-meta-item-icon">
               <i class="fa fa-calendar-o"></i>
             </span>
-            <span class="post-meta-item-text">Veröffentlicht am</span>
+            <span class="post-meta-item-text">发表于</span>
             <time itemprop="dateCreated" datetime="2016-08-03T16:02:50+08:00" content="2016-08-03">
               2016-08-03
             </time>
@@ -295,7 +295,8 @@
       :password             =&gt; &apos;你的密码&apos;,
       :authentication       =&gt; :login,
   }
-</code></pre><h5 id="2-创建一个基础类-放在-app-mailers目录下"><a href="#2-创建一个基础类-放在-app-mailers目录下" class="headerlink" title="2 创建一个基础类 放在 app/mailers目录下"></a>2 创建一个基础类 放在 app/mailers目录下</h5><pre><code>class ApplicationMailer &lt; ActionMailer::Base
+</code></pre><a id="more"></a>
+<h5 id="2-创建一个基础类-放在-app-mailers目录下"><a href="#2-创建一个基础类-放在-app-mailers目录下" class="headerlink" title="2 创建一个基础类 放在 app/mailers目录下"></a>2 创建一个基础类 放在 app/mailers目录下</h5><pre><code>class ApplicationMailer &lt; ActionMailer::Base
        default from: &quot;邮箱地址&quot; #这里最好和上面配置文件中你的邮箱账户一样，否则可能有奇怪问题
        layout &apos;mailer&apos;
 end
@@ -383,10 +384,10 @@ end
       
         <ul class="sidebar-nav motion-element">
           <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
-            Inhaltsverzeichnis
+            文章目录
           </li>
           <li class="sidebar-nav-overview" data-target="site-overview">
-            Übersicht
+            站点概览
           </li>
         </ul>
       
@@ -403,7 +404,7 @@ end
           <div class="site-state-item site-state-posts">
             <a href="/archives">
               <span class="site-state-item-count">1</span>
-              <span class="site-state-item-name">Artikel</span>
+              <span class="site-state-item-name">日志</span>
             </a>
           </div>
 
@@ -413,7 +414,7 @@ end
             <div class="site-state-item site-state-tags">
               <a href="/tags">
                 <span class="site-state-item-count">1</span>
-                <span class="site-state-item-name">Tags</span>
+                <span class="site-state-item-name">标签</span>
               </a>
             </div>
           
@@ -468,11 +469,11 @@ end
 </div>
 
 <div class="powered-by">
-  Erstellt mit  <a class="theme-link" href="https://hexo.io">Hexo</a>
+  由 <a class="theme-link" href="https://hexo.io">Hexo</a> 强力驱动
 </div>
 
 <div class="theme-info">
-  Theme -
+  主题 -
   <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
     NexT.Muse
   </a>
